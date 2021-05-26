@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <title>Project 78</title>
+</head>
+
+<body>
+    <h1>My Family Book</h1>
+    <img id="image_for_all" src="son.jpeg">
+    <h4 id="nameh4">Soham Sai Mishra (Me)</h4>
+    <button onclick="next();">next</button>
+    <script>
+        var names = ["Soham Sai Mishra (Me)", "Tushar S. Mishra (Dad)", "Reshmi Mishra (Mom)", "Shriyans Mishra (Brother)"];
+        var images = ["son.jpeg", "dda.jpeg", "mom.jpeg", "eld.jpeg"];
+        var i = 0;
+        function next() {
+            i++;
+            var number_membs = 3
+            if (i > number_membs) {
+                i = 0;
+            }
+            var updatedName = names[i];
+            var updatedImage = images[i];
+            document.getElementById("image_for_all").src = updatedImage;
+            document.getElementById("nameh4").innerHTML = updatedName;
+        }
+    </script>
+</body>
+
+</html>
